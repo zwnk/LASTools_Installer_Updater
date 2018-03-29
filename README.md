@@ -14,15 +14,21 @@ At last it checks the PATH var and if not presents adds "C:\LASTools\bin".
 
 ### Stuff to adjust
 change the lastools license file path:
+
 `lastoolslicense = "\\path\2\lastoolslicense.txt"`
 
 if you want to install lastools to a different folder change:
+
 `$lastoolsPathLocal = "c:\"`
+
 The downloaded zip contains the folder LASTools so no need to set it!
 
 if changed, you need to change the following variables according to your install folder:
+
 `$lastoolsfolder ="C:\LASTools"`
+
 `# lastools path as regex`
+
 `$regex = "[cC]\:\\LASTools"`
 
 
