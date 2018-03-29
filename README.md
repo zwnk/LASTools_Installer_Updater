@@ -1,34 +1,34 @@
-# LASTools_Installer_Updater
+# LAStools_Installer_Updater
 
-A simple script for installing and updating [LASTools](https://rapidlasso.com/).
+A simple script for installing and updating [LAStools](https://rapidlasso.com/).
 
 The script needs an elevated rights powershell (admin) and can be excuted with the following command:
 
-`powershell -executionpolicy bypass -File .\lastools_install_simple.ps1`
+`powershell -executionpolicy bypass -File .\LAStools_install_simple.ps1`
 
-The script downloads(to MyDocuments) the latest version from rapidlassos website, extracts it to C:\LASTools.
+The script downloads(to MyDocuments) the latest version from rapidlassos website, extracts it to C:\LAStools.
 
-Then it creates a link on the user Desktop to LASTools\bin.
+Then it creates a link on the user Desktop to LAStools\bin.
 
-At last it checks the PATH var and if not presents adds "C:\LASTools\bin".
+At last it checks the PATH var and if not presents adds "C:\LAStools\bin".
 
 ### Stuff to adjust
-change the lastools license file path:
+change the LAStools license file path:
 
-`lastoolslicense = "\\path\2\lastoolslicense.txt"`
+`LAStoolslicense = "\\path\2\LAStoolslicense.txt"`
 
-if you want to install lastools to a different folder change:
+if you want to install LAStools to a different folder change:
 
-`$lastoolsPathLocal = "c:\"`
+`$LAStoolsPathLocal = "c:\"`
 
-The downloaded zip contains the folder LASTools so no need to set it!
+The downloaded zip contains the folder LAStools so no need to set it!
 
 if changed, you need to change the following variables according to your install folder:
 
-`$lastoolsfolder ="C:\LASTools"`
+`$LAStoolsfolder ="C:\LAStools"`
 
-`# lastools path as regex`
+`# LAStools path as regex`
 
-`$regex = "[cC]\:\\LASTools"`
+`$regex = "[cC]\:\\LAStools"`
 
 
