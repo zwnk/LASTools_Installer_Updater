@@ -7,6 +7,8 @@ The script needs an elevated rights powershell (admin) and can be excuted with t
 `powershell -executionpolicy bypass -File .\lastools_install_simple.ps1`
 
 The script downloads(to MyDocuments) the latest version from rapidlassos website, extracts it to C:\LASTools.
+
 Then it creates a link on the user Desktop to LASTools\bin.
+
 At last it checks the PATH var and if not presents adds "C:\LASTools\bin".
 
