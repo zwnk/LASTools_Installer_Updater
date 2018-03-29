@@ -15,7 +15,7 @@ At last it checks the PATH var and if not presents adds "C:\LAStools\bin".
 ### Stuff to adjust
 change the LAStools license file path:
 
-`LAStoolslicense = "\\path\2\LAStoolslicense.txt"`
+`LAStoolslicense = "\\path\2\yourlicensefile.xxx"`
 
 if you want to install LAStools to a different folder change:
 

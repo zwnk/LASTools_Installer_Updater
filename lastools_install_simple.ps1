@@ -8,7 +8,7 @@
 #################
 
 # folders for batchscripts on odin
-$lastoolslicense = "\\path\2\lastoolslicense.txt"
+$lastoolslicense = "\\path\2\yourlicensefile.xxx"
 
 # LAStools download url and local install poth
 $lastoolsURL = "http://lastools.org/download/LAStools.zip"
@@ -41,6 +41,9 @@ wget $lastoolsURL -OutFile "$downloads\Lastools.zip"
 # Extract to c\:LASTools
 Write-host "`nExtracting LASTools to C:\LASTools\"
 Expand-Archive "$downloads\Lastools.zip" -DestinationPath $lastoolsPathLocal -Force
+
+# copy license file to LAStools\bin
+copy-item $lastoolslicense $lastoolsPathLocal"\LASTools\bin"
 
 # function for creating desktop link
 function createLinkonDesktop
