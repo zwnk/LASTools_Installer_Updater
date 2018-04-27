@@ -34,8 +34,21 @@ Write-host "`nLASTools installer & updater"
 Write-host "version 1.01"
 Write-host "27.04.2018"
 
-# checking for running LAStools instance
-if( ($p = (Get-Process -ErrorAction SilentlyContinue -Name $activeLAStools)) -eq $null)
+# function for checking if LAStools is running
+function checkLAStoolsRunning {
+
+    # all lastools binaries
+    $progn = "blast2dem","blast2iso","las2dem","las2iso","las2las","las2shp","las2tin","las2txt","lasboundary","lascanopy","lasclassify","lasclip","lascolor","lascontrol","lascopy","lasdiff","lasduplicate","lasgrid","lasground","lasground_new","lasheight","lasindex","lasinfo","laslayers","lasmerge","lasnoise","lasoptimize","lasoverage","lasoverlap","lasplanes","lasprecision","laspublish","lasreturn","lassort","lassplit","lasthin","lastile","lastool","lastrack","lasvalidate","lasview","lasvoxel","laszip","shp2las","sonarnoiseblaster","txt2las","unzip"
+    ForEach ($p in $progn) {
+        $isRunning = (Get-Process | Where-Object { $_.Name -eq $p }).Count -gt 0
+        if ($isRunning){
+            return $true
+        } 
+    }
+}
+
+# LAStools is running?
+if ( !(checkLAStoolsRunning) )
 {
 
     # Download latest Version
