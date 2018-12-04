@@ -11,7 +11,7 @@
 $lastoolslicense = "\\path\2\yourlicensefile.xxx"
 
 # LAStools download url and local install poth
-$lastoolsURL = "http://lastools.org/download/LAStools.zip"
+$lastoolsURL = "http://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip"
 $lastoolsPathLocal = "c:\"
 
 # for PATH Variable change drive letter and path if needed
